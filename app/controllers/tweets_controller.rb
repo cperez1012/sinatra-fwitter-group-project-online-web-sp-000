@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
     if !logged_in?
       redirect '/login'
     else
-    # user = current_user
+      user = current_user
       tweets = Tweet.all
       erb :'tweets/tweets'
     end
