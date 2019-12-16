@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
     else
       user = current_user
       tweets = Tweet.all
-      erb :'tweets/show_tweet'
+      erb :'tweets/tweets'
     end
   end
 
