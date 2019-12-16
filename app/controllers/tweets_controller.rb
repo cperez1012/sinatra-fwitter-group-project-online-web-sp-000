@@ -12,9 +12,9 @@ class TweetsController < ApplicationController
     if !logged_in?
       redirect '/login'
     end
-    @user = current_user
-    @tweets = Tweet.all
-    erb :'tweets/index'
+    # user = current_user
+    tweets = Tweet.all
+    erb :'tweets/tweets'
   end
 
   post '/tweets' do
@@ -31,7 +31,7 @@ class TweetsController < ApplicationController
     if !logged_in?
       redirect "/login"
     end
-    @tweet = Tweet.find(params[:id])
+    tweet = Tweet.find(params[:id])
     erb :'tweets/show_tweet'
   end
 
@@ -39,7 +39,7 @@ class TweetsController < ApplicationController
     if !logged_in?
       redirect "/login"
     end
-    @tweet = Tweet.find(params[:id])
+    tweet = Tweet.find(params[:id])
     erb :'tweets/edit_tweet'
   end
 
