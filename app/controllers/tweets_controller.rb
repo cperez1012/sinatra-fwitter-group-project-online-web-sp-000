@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
     end
     @user = current_user
     @tweets = Tweet.all
-    erb :'tweets/show_tweet'
+    erb :'tweets/new'
   end
 
   post '/tweets' do
